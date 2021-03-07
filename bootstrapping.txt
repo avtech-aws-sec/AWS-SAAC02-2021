@@ -1,0 +1,9 @@
+#!/bin/bash
+yum update -y
+yum install -y httpd
+yum install -y wget
+chkconfig httpd on
+cd /var/www/html
+wget https://raw.githubusercontent.com/avtech-aws-sec/AMI-Bootstrapping/master/site/index.html
+wget https://raw.githubusercontent.com/avtech-aws-sec/AMI-Bootstrapping/master/site/bootstrapping.jpeg
+service httpd start
