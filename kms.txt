@@ -1,0 +1,5 @@
+aws kms create-key --description "KMS Demo" --region us-east-1
+
+aws kms create-alias --target-key-id xxx --alias-name "alias/kmsdemo" --region us-east-1
+
+aws kms generate-date-key --key-id alias/kmsdemo --key-spec AES_256 --region us-east-1
